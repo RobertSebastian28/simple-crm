@@ -6,16 +6,10 @@
             <th>Zip Code</th>
         </tr>
 
-        <tr>
-            <td>as</td>
-            <td>asd</td>
-            <td>asda</td>
-        </tr>
-
-        <tr>
-            <td>as</td>
-            <td>asd</td>
-            <td>asda</td>
+        <tr *ngFor="let user of allUsers" [routerLink]="['/users/'+ user.id]">
+            <td>{{ user.firstName }} {{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.city }}</td>
         </tr>
 
     </table>
